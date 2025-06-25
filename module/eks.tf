@@ -36,7 +36,7 @@ resource "aws_iam_openid_connect_provider" "eks-oidc" {
 resource "aws_eks_addon" "eks-addons" {
   cluster_name      = aws_eks_cluster.eks[0].name
   addon_name        = "coredns"
-  addon_version     = "v1.11.0-eksbuild.2"  # ← replace with supported version
+  addon_version     = "v1.11.4-eksbuild.14"  # ← replace with supported version
 
   depends_on = [
     aws_eks_node_group.ondemand-node,
