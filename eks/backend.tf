@@ -7,10 +7,10 @@ terraform {
     }
   }
   backend "s3" {
-    bucket         = "rohnny-terraform-remote-state"
+    bucket         = "devs-project-bucket"
     region         = "us-east-1"
     key            = "eks/terraform.tfstate"
-    dynamodb_table = "Lock-Files"
+    dynamodb_table = "devs-dynamo-table"
     encrypt        = true
   }
 }
